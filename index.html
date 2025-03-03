@@ -15,65 +15,74 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <header class="header">
-      <div class="container">
-        <h1>Onda</h1>
-        <p>Talent Management Agency</p>
-      </div>
+      <nav class="nav container">
+        <div class="logo">
+          <h1>Onda</h1>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container">
-          <h2>Elevate Your Talent</h2>
-          <p>
-            Connecting outstanding talent with the right opportunities. At Onda,
-            we empower artists to reach new heights.
-          </p>
-          <a href="#contact" class="btn">Get in Touch</a>
-        </div>
-      </section>
-
-      <section class="about">
-        <div class="container">
-          <h2>About Us</h2>
-          <p>
-            Onda is a cutting-edge talent management agency dedicated to
-            promoting exceptional talent. We work closely with artists to open
-            doors and create opportunities that align with their unique vision.
-          </p>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Contact Us</h2>
-          <form action="mailto:bookings@ondatalent.com" method="post" enctype="text/plain">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Onda. All rights reserved.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content container">
+        <h2>Elevate Your Talent</h2>
+        <p>Connecting outstanding talent with exclusive opportunities.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
       </div>
-    </footer> 
+    </section>
+
+    <!-- About Section -->
+    <section class="about container" id="about">
+      <h2>About Onda</h2>
+      <p>
+        Onda is a cutting-edge talent management agency dedicated to empowering creative talent. Our mission is to elevate artists by providing strategic guidance, professional management, and exclusive industry opportunities.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact container" id="contact">
+      <h2>Contact Us</h2>
+      <form action="mailto:bookings@ondatalent.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+      <p>&copy; 2025 Onda. All rights reserved.</p>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
